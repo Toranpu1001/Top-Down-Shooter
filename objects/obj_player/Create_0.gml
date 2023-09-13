@@ -37,17 +37,25 @@ fire = function()
 	var _shot = mouse_check_button(mb_left)
 	
 	//Definindo o delay para os tiros
+	
 	if(delay > 0) delay--;
 
-	if(_shot && delay <= 0)
-	{	
-		var _fire = instance_create_layer(x , y , "tiros", obj_fire);
-		_fire.direction		= _dir
-		_fire.image_angle	= _dir
-		_fire.speed			= 20
+	
+		if(_shot && delay <= 0)
+		{
+			var _fire = instance_create_layer(x , y , "tiros", obj_fire);
+			_fire.direction		= _dir
+			_fire.image_angle	= _dir
+			_fire.speed			= 20
 		
-		delay = 15;
-	}
+			delay = 15;
+		}
+		//Se eu não estou atirando a sprite fica normal;
+		if(!_shot)sprite_index = spr_player
+		//Se eu estou atirando mude a sprite;
+		else sprite_index = spr_shooting
+	
+		
 	show_debug_message(delay)
 	image_angle = _dir//Fazendo o player olhar para a direção dou mouse;
 }
