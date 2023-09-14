@@ -17,8 +17,10 @@
     {"name":"Sprites","order":1,"path":"folders/Sprites.yy",},
   ],
   "ResourceOrderSettings": [
+    {"name":"Object3","order":2,"path":"objects/Object3/Object3.yy",},
     {"name":"spr_shooting","order":3,"path":"sprites/spr_shooting/spr_shooting.yy",},
     {"name":"obj_fire","order":1,"path":"objects/obj_fire/obj_fire.yy",},
+    {"name":"spr_enemie","order":4,"path":"sprites/spr_enemie/spr_enemie.yy",},
     {"name":"spr_efeito","order":2,"path":"sprites/spr_efeito/spr_efeito.yy",},
     {"name":"spr_fire","order":1,"path":"sprites/spr_fire/spr_fire.yy",},
   ],
