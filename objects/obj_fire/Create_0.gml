@@ -3,6 +3,8 @@
 
 speed = 0;
 
+damage = 1
+
 time_life = room_speed * 6
 
 image_xscale = 2.5;
@@ -29,7 +31,20 @@ destroy = function()
 	if(time_life <= 0) instance_destroy();	
 }
 
-
+colision_enemie = function()
+{	//armazenando que inimigo eu vou dar tal pipoco
+	var _inimigo = instance_place(x, y, obj_enemie1);
+	
+	if(_inimigo)
+	{
+		_inimigo.lose_life(damage);
+		
+		//Me destruindo após colidir
+		instance_destroy();
+		
+		instance_create_layer(x, y, "inimigos", obj_boom);
+	}
+}
 
 
 

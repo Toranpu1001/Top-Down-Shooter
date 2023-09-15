@@ -1,7 +1,7 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "Object3",
+  "name": "obj_screenshake",
   "eventList": [],
   "managed": true,
   "overriddenProperties": [],

@@ -6,7 +6,7 @@ efeito_tamanho();
 
 destroy();
 
-
+colision_enemie();
 
 
 
