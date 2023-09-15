@@ -49,6 +49,7 @@
     {"id":{"name":"spr_efeito","path":"sprites/spr_efeito/spr_efeito.yy",},},
     {"id":{"name":"spr_fire","path":"sprites/spr_fire/spr_fire.yy",},},
     {"id":{"name":"obj_trace","path":"objects/obj_trace/obj_trace.yy",},},
+    {"id":{"name":"spr_background1","path":"sprites/spr_background1/spr_background1.yy",},},
     {"id":{"name":"spr_chunk","path":"sprites/spr_chunk/spr_chunk.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
   ],

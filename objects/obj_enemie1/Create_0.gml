@@ -8,7 +8,9 @@ time_moviment		= cooldown;//tempo para mudar de direção
 
 distancia_minima	= 250;//para seguir o player
 
-life = 3;
+life = 1;
+
+shake = 10;
 
 define_movimento	= function()
 {
@@ -78,7 +80,10 @@ lose_life = function(_damage)
 	if(life <= 0)//"Se minha vida esgotar, então eu morro neh, dããã"
 	{	
 		chunks();
+				
 		instance_destroy();
+		
+		if(global.shake < shake ) global.shake = shake;
 	}	
 
 }

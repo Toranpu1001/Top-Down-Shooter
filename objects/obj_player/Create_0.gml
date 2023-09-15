@@ -18,7 +18,7 @@ move = function()
 	
 	if(_velv != 0 || _velh != 0)
 	{
-		vimage_speed = 1;
+		image_speed = 1;
 	}
 	else
 	{

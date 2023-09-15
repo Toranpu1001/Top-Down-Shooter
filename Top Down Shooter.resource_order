@@ -28,6 +28,7 @@
     {"name":"spr_efeito","order":2,"path":"sprites/spr_efeito/spr_efeito.yy",},
     {"name":"spr_fire","order":1,"path":"sprites/spr_fire/spr_fire.yy",},
     {"name":"obj_trace","order":4,"path":"objects/obj_trace/obj_trace.yy",},
+    {"name":"spr_background1","order":8,"path":"sprites/spr_background1/spr_background1.yy",},
     {"name":"spr_chunk","order":5,"path":"sprites/spr_chunk/spr_chunk.yy",},
   ],
 }
