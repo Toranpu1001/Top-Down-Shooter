@@ -17,6 +17,7 @@
   ],
   "ResourceOrderSettings": [
     {"name":"obj_enemie1","order":2,"path":"objects/obj_enemie1/obj_enemie1.yy",},
+    {"name":"obj_enemie2","order":7,"path":"objects/obj_enemie2/obj_enemie2.yy",},
     {"name":"spr_shooting","order":3,"path":"sprites/spr_shooting/spr_shooting.yy",},
     {"name":"obj_fire","order":1,"path":"objects/obj_fire/obj_fire.yy",},
     {"name":"spr_trace","order":6,"path":"sprites/spr_trace/spr_trace.yy",},
@@ -27,8 +28,10 @@
     {"name":"obj_boom","order":5,"path":"objects/obj_boom/obj_boom.yy",},
     {"name":"spr_efeito","order":2,"path":"sprites/spr_efeito/spr_efeito.yy",},
     {"name":"spr_fire","order":1,"path":"sprites/spr_fire/spr_fire.yy",},
+    {"name":"obj_enemie_patern","order":8,"path":"objects/obj_enemie_patern/obj_enemie_patern.yy",},
     {"name":"obj_trace","order":4,"path":"objects/obj_trace/obj_trace.yy",},
     {"name":"spr_background1","order":8,"path":"sprites/spr_background1/spr_background1.yy",},
+    {"name":"spr_enemie2","order":9,"path":"sprites/spr_enemie2/spr_enemie2.yy",},
     {"name":"spr_chunk","order":5,"path":"sprites/spr_chunk/spr_chunk.yy",},
   ],
 }

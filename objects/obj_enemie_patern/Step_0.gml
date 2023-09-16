@@ -1,15 +1,13 @@
 /// @description Insert description here
 // Começa a codar. ᕦ⁠(⁠ò⁠_⁠ó⁠ˇ⁠)⁠ᕤ
 
-event_inherited()
-
-follow();
 
 
+room_limit();
 
+change_direction();
 
-
-
+efeito_dano();
 
 
 
@@ -59,6 +57,8 @@ follow();
 
 
 
-// Inherit the parent event
-event_inherited();
+
+
+
+
 

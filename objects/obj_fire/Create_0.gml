@@ -35,7 +35,7 @@ destroy = function()
 
 colision_enemie = function()
 {	//armazenando que inimigo eu vou dar tal pipoco
-	var _inimigo = instance_place(x, y, obj_enemie1);
+	var _inimigo = instance_place(x, y, obj_enemie_patern);
 	
 	if(_inimigo)
 	{
