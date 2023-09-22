@@ -3,16 +3,17 @@
 
 event_inherited();
 
-cooldown			= room_speed * irandom_range(4, 10);
+life = 10;
+shake = 20;
 
-time_moviment		= cooldown;//tempo para mudar de direção
-
-distancia_minima	= 250;//para seguir o player
-
-life = 3;
-
-shake = 10;
-
+//velocidade máxima
+vel_max		= 2;
+ped_min		= 5;
+//pedaços de explosão
+ped_max		= 50;
+//time para mudar de direção
+temp_min	= 2;
+temp_max	= 3;
 
 
 

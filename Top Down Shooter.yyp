@@ -36,6 +36,7 @@
   "resources": [
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
     {"id":{"name":"obj_enemie1","path":"objects/obj_enemie1/obj_enemie1.yy",},},
+    {"id":{"name":"obj_egg","path":"objects/obj_egg/obj_egg.yy",},},
     {"id":{"name":"obj_enemie2","path":"objects/obj_enemie2/obj_enemie2.yy",},},
     {"id":{"name":"spr_player","path":"sprites/spr_player/spr_player.yy",},},
     {"id":{"name":"src_nome","path":"scripts/src_nome/src_nome.yy",},},
@@ -44,6 +45,7 @@
     {"id":{"name":"spr_trace","path":"sprites/spr_trace/spr_trace.yy",},},
     {"id":{"name":"spr_enemie","path":"sprites/spr_enemie/spr_enemie.yy",},},
     {"id":{"name":"spr_boom","path":"sprites/spr_boom/spr_boom.yy",},},
+    {"id":{"name":"spr_egg","path":"sprites/spr_egg/spr_egg.yy",},},
     {"id":{"name":"obj_screenshake","path":"objects/obj_screenshake/obj_screenshake.yy",},},
     {"id":{"name":"obj_chunk","path":"objects/obj_chunk/obj_chunk.yy",},},
     {"id":{"name":"obj_boom","path":"objects/obj_boom/obj_boom.yy",},},

@@ -1,28 +1,23 @@
 /// @description Insert description here
 // Começa a codar. ᕦ⁠(⁠ò⁠_⁠ó⁠ˇ⁠)⁠ᕤ
-cooldown			= room_speed * irandom_range(10, 20);
+//Variáveis comuns (tributos)
 
-time_moviment		= cooldown;//tempo para mudar de direção
+time_moviment = room_speed * random_range(1, 2);
 
-distancia_minima	= 0;//para seguir o player
+life		= 1;
+shake		= 1;
+vel_max		= 1;
 
-life = 0;
+ped_min		= 1;
+ped_max		= 2;
 
-shake = 0;
+temp_min	= 1;
+temp_max	= 2;
 
-define_movimento	= function()
-{
 
-	speed		= irandom_range(1, 4);
 
-	direction	= irandom(359);//direção aleatória
-
-	image_angle	= direction;
-
-}
-
-define_movimento();
-
+#region Comportamentos
+//Não sair da tela;
 room_limit = function()
 {	//"Se eu der com a cara na parede, eu inverto a minha velocidade:|"
 	if ( x - sprite_width/2 < 0 || x + sprite_width/2 > room_width)
@@ -37,20 +32,7 @@ room_limit = function()
 
 }
 
-change_direction = function()
-{
-	time_moviment--;
-	//"Se esgotar o tempo, eu troco de direção"	
-	if(time_moviment < 0)
-	{
-		define_movimento();
-		
-		time_moviment = cooldown;
-	}
-}
-
-///@method lose_life(value_damage);
-lose_life = function(_damage)
+lose_life = function(_damage)//Levar dano
 {	
 
 	//Se não houver valor para o dano, então seu valor será: 1
@@ -72,6 +54,57 @@ lose_life = function(_damage)
 
 }
 
+chunks = function()//explosão
+{
+	//Criando o rastro
+	var _trace = instance_create_layer(x, y, "inimigos", obj_trace);	
+	//Angulo aleatório para o rastro
+	_trace.image_angle = random(359);
+	
+	var _qtd = random_range(ped_min, ped_max);
+
+	repeat(_qtd)
+	{
+		var _chunk = instance_create_layer(x, y, "inimigos", obj_chunk);
+		
+		_chunk.speed		= random_range(10, 20);
+
+		_chunk.direction	= irandom(359);
+
+		_chunk.image_angle	= _chunk.direction
+		
+	}
+}
+
+
+//Meu time para mudar o movimento
+change_direction = function()
+{
+	time_moviment--;
+	//"Se esgotar o tempo, eu troco de direção"	
+	if(time_moviment < 0)
+	{
+		define_movimento();
+		//Resetando o time;
+		time_moviment = room_speed * random_range(temp_min, temp_max);
+	}
+}
+
+
+define_movimento = function()
+{
+
+	speed		= random(vel_max);
+
+	direction	= irandom(359);//direção aleatória
+
+	image_angle	= direction;
+
+}
+
+define_movimento();
+
+
 efeito_dano = function()
 {
 draw_self()
@@ -83,23 +116,12 @@ if(place_meeting(x, y, obj_fire))
 	
 }
 }
-chunks = function()
-{
 
-	var _qtd = random_range(5 ,10);
-	repeat(_qtd)
-	{
-		var _chunk = instance_create_layer(x, y, "inimigos", obj_chunk);
-		var _trace = instance_create_layer(x, y, "inimigos", obj_trace);	
-		
-		_chunk.speed		= random_range(10, 20);
+#endregion
 
-		_chunk.direction	= irandom(359);
 
-		_chunk.image_angle	= _chunk.direction
-		
-	}
-}
+
+
 
 
 
