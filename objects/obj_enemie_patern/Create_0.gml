@@ -2,7 +2,7 @@
 // Começa a codar. ᕦ⁠(⁠ò⁠_⁠ó⁠ˇ⁠)⁠ᕤ
 //Variáveis comuns (tributos)
 
-time_moviment = room_speed * random_range(1, 2);
+
 
 life		= 1;
 shake		= 1;
@@ -14,7 +14,7 @@ ped_max		= 2;
 temp_min	= 1;
 temp_max	= 2;
 
-
+time_moviment = room_speed * random_range(temp_min, temp_max);
 
 #region Comportamentos
 //Não sair da tela;
