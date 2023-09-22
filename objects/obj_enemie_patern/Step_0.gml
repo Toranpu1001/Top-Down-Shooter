@@ -61,4 +61,3 @@ efeito_dano();
 
 
 
-

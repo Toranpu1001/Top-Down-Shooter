@@ -14,6 +14,7 @@ ped_max		= 2;
 temp_min	= 1;
 temp_max	= 2;
 
+damage		= 1;
 time_moviment = room_speed * random_range(temp_min, temp_max);
 
 #region Comportamentos
@@ -76,7 +77,6 @@ chunks = function()//explosão
 	}
 }
 
-
 //Meu time para mudar o movimento
 change_direction = function()
 {
@@ -116,6 +116,7 @@ if(place_meeting(x, y, obj_fire))
 	
 }
 }
+
 
 #endregion
 

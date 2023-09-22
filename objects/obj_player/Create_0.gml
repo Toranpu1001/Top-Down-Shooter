@@ -1,8 +1,13 @@
 /// @description Insert description here
 // You can write your code in this editor
+life				= 3;
+image_index			= 2;
+alpha_val			= 0.05;
+delay				= 15;//delay de tiro
+invencible			= false;
+cooldown_invencible	= room_speed * 3;
+invencilbe_duration	= cooldown_invencible 
 
-image_index = 2;
-delay = 15
 move = function()
 {	
 	var _velh, _velv, _vel;
@@ -27,6 +32,7 @@ move = function()
 	}
 	
 }
+
 fire = function()
 {
 
@@ -59,6 +65,50 @@ fire = function()
 	show_debug_message(delay)
 	image_angle = _dir//Fazendo o player olhar para a direção dou mouse;
 }
+
+lose_life = function()
+{
+	var _inimigo = instance_place(x, y, obj_enemie_patern);
+	
+	if(_inimigo)
+	{
+		
+		if(!invencible)
+		{//Se o jogador não estiver piscando e não invencivel, reduza sua saúde e faça-o piscar
+			
+			life				-= _inimigo.damage;
+				
+			invencible			 = true;
+			//o tempo de piscar será o mesmo tempo de invencibilidade
+		
+			invencible_duration	 = cooldown_invencible;
+		}	
+	}
+	if(invencible)
+	{// Se o jogador estiver piscando, alterne a visibilidade
+		show_debug_message(alpha_val);
+		image_alpha += alpha_val;
+		
+		if(image_alpha > 1 || image_alpha < 0) alpha_val *= -1
+	
+		invencible_duration	-= 1;//Diminua o tempo de invencibilidade
+		
+		if(invencible_duration <=0)
+		{//Se o tempo de invencibilidade chegar a zero ou menos, faça ele não piscar mais e se tornar vencivel;
+				
+			invencible		 = false;
+			
+			image_alpha		 = 1;
+		}
+	}
+		
+	if (life < 0)
+	{
+		instance_destroy();
+	}
+	
+}
+
 
 
 

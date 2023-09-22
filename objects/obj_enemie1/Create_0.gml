@@ -6,8 +6,8 @@ event_inherited();
 
 distancia_minima	= 250;//para seguir o player
 
-life = 1;
-shake = 10;
+life		= 1;
+shake		= 10;
 
 //velocidade máxima
 vel_max		= 2;

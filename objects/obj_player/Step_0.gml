@@ -7,8 +7,7 @@ move();
 
 fire();	
 
-
-
+lose_life();
 
 
 
