@@ -68,16 +68,17 @@ fire = function()
 
 lose_life = function()
 {
+	show_debug_message(invencible);
 	var _inimigo = instance_place(x, y, obj_enemie_patern);
 	
 	if(_inimigo)
 	{
 		
 		if(!invencible)
-		{//Se o jogador não estiver piscando e não invencivel, reduza sua saúde e faça-o piscar
+		{//Se o jogador não estiver invencivel, reduza sua saúde e faça-o piscar
 			
 			life				-= _inimigo.damage;
-				
+			
 			invencible			 = true;
 			//o tempo de piscar será o mesmo tempo de invencibilidade
 		
@@ -86,7 +87,6 @@ lose_life = function()
 	}
 	if(invencible)
 	{// Se o jogador estiver piscando, alterne a visibilidade
-		show_debug_message(alpha_val);
 		image_alpha += alpha_val;
 		
 		if(image_alpha > 1 || image_alpha < 0) alpha_val *= -1
@@ -94,17 +94,18 @@ lose_life = function()
 		invencible_duration	-= 1;//Diminua o tempo de invencibilidade
 		
 		if(invencible_duration <=0)
-		{//Se o tempo de invencibilidade chegar a zero ou menos, faça ele não piscar mais e se tornar vencivel;
-				
-			invencible		 = false;
-			
+		{
+			invencible = false;
+		
 			image_alpha		 = 1;
 		}
 	}
-		
+	
 	if (life < 0)
 	{
 		instance_destroy();
+		
+		room_restart();
 	}
 	
 }
