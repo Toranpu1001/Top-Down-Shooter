@@ -13,7 +13,7 @@ shake = function()
 
 	if(global.shake > 0)
 	{
-	global.shake *= .95
+		global.shake *= .95
 	
 		if(global.shake <= .1) global.shake = 0;
 	}

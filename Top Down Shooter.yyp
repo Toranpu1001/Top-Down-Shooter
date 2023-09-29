@@ -33,6 +33,7 @@
     "IDEVersion": "2023.8.0.98",
   },
   "resources": [
+    {"id":{"name":"spr_arrow","path":"sprites/spr_arrow/spr_arrow.yy",},},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
     {"id":{"name":"obj_enemie1","path":"objects/obj_enemie1/obj_enemie1.yy",},},
     {"id":{"name":"obj_egg","path":"objects/obj_egg/obj_egg.yy",},},
@@ -45,6 +46,7 @@
     {"id":{"name":"spr_enemie","path":"sprites/spr_enemie/spr_enemie.yy",},},
     {"id":{"name":"spr_boom","path":"sprites/spr_boom/spr_boom.yy",},},
     {"id":{"name":"spr_egg","path":"sprites/spr_egg/spr_egg.yy",},},
+    {"id":{"name":"Sprite14","path":"sprites/Sprite14/Sprite14.yy",},},
     {"id":{"name":"obj_screenshake","path":"objects/obj_screenshake/obj_screenshake.yy",},},
     {"id":{"name":"obj_chunk","path":"objects/obj_chunk/obj_chunk.yy",},},
     {"id":{"name":"obj_boom","path":"objects/obj_boom/obj_boom.yy",},},

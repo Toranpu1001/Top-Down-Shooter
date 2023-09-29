@@ -2,6 +2,26 @@
 // Começa a codar. ᕦ⁠(⁠ò⁠_⁠ó⁠ˇ⁠)⁠ᕤ
 global.level = 1
 
+global.life = 3;
+location = function()
+{
+
+if(instance_exists(obj_player) && instance_exists(obj_enemie2))
+{
+	
+	with(obj_player)
+	{
+		var _prox = instance_nearest(x, y, obj_enemie2);
+		var _dir = point_direction(x, y, _prox.x, _prox.y);
+		
+		x = camera = camera_get_view_width(view_camera[0] / 2)
+		
+	}
+
+}
+
+}
+
 room_start = function()
 {
 	randomize();

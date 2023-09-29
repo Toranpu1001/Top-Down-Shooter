@@ -2,11 +2,12 @@
 // Começa a codar. ᕦ⁠(⁠ò⁠_⁠ó⁠ˇ⁠)⁠ᕤ
 
 
-prox_lvl();
 
-show_debug_message(global.level);
+d
 
-location();
+
+
+
 
 
 

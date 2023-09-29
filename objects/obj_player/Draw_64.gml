@@ -2,11 +2,19 @@
 // Começa a codar. ᕦ⁠(⁠ò⁠_⁠ó⁠ˇ⁠)⁠ᕤ
 
 
-prox_lvl();
+var _x = 60
 
-show_debug_message(global.level);
+repeat(global.life)
+{
+	draw_sprite_ext(Sprite14, image_index, _x, 60, 1, 1, 0, c_white, 1);	
 
-location();
+	_x += 60;
+}
+
+
+
+
+
 
 
 

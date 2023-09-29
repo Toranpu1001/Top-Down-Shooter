@@ -1,6 +1,5 @@
 /// @description Insert description here
 // You can write your code in this editor
-life				= 3;
 image_index			= 2;
 alpha_val			= 0.05;
 delay				= 15;//delay de tiro
@@ -77,12 +76,12 @@ lose_life = function()
 		if(!invencible)
 		{//Se o jogador não estiver invencivel, reduza sua saúde e faça-o piscar
 			
-			life				-= _inimigo.damage;
+			global.life				-= _inimigo.damage;
 			
-			invencible			 = true;
+			invencible				 = true;
 			//o tempo de piscar será o mesmo tempo de invencibilidade
 		
-			invencible_duration	 = cooldown_invencible;
+			invencible_duration		 = cooldown_invencible;
 		}	
 	}
 	if(invencible)
@@ -101,7 +100,7 @@ lose_life = function()
 		}
 	}
 	
-	if (life < 0)
+	if (global.life < 0)
 	{
 		instance_destroy();
 		
