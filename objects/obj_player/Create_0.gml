@@ -6,6 +6,7 @@ delay				= 15;//delay de tiro
 invencible			= false;
 cooldown_invencible	= room_speed * 3;
 invencilbe_duration	= cooldown_invencible 
+time_room = 2 * room_speed;
 
 move = function()
 {	
@@ -102,6 +103,8 @@ lose_life = function()
 	
 	if (global.life < 0)
 	{
+		global.life = 3;	
+		
 		instance_destroy();
 		
 		room_restart();

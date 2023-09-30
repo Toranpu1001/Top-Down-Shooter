@@ -6,7 +6,7 @@ prox_lvl();
 
 show_debug_message(global.level);
 
-location();
+
 
 
 

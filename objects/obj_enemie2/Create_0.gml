@@ -11,10 +11,13 @@ vel_max		= 2;
 //pedaços de explosão
 ped_min		= 40;
 ped_max		= 50;
+ped_vel_min	= 40;
+ped_vel_max	= 60;
 //time para mudar de direção
 temp_min	= 10;
 temp_max	= 20;
 
+tk_damage	= true;
 time_shock	= room_speed * random_range(temp_min, temp_max);
 
 shock = function()

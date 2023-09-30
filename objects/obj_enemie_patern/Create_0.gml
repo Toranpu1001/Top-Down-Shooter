@@ -10,11 +10,13 @@ vel_max		= 1;
 
 ped_min		= 1;
 ped_max		= 2;
-
+ped_vel_min	= 30;
+ped_vel_max	= 40;
 temp_min	= 1;
 temp_max	= 2;
 
 damage		= 1;
+tk_damage	= false;
 time_moviment = room_speed * random_range(temp_min, temp_max);
 
 #region Comportamentos
@@ -68,12 +70,13 @@ chunks = function()//explosão
 	{
 		var _chunk = instance_create_layer(x, y, "inimigos", obj_chunk);
 		
-		_chunk.speed		= random_range(10, 20);
+		_chunk.speed		= random_range(ped_vel_min, ped_vel_max);
 
 		_chunk.direction	= irandom(359);
 
 		_chunk.image_angle	= _chunk.direction
 		
+		_chunk.tk_damage = tk_damage
 	}
 }
 

@@ -3,28 +3,12 @@
 global.level = 1
 
 global.life = 3;
-location = function()
-{
 
-if(instance_exists(obj_player) && instance_exists(obj_enemie2))
-{
-	
-	with(obj_player)
-	{
-		var _prox = instance_nearest(x, y, obj_enemie2);
-		var _dir = point_direction(x, y, _prox.x, _prox.y);
-		
-		x = camera = camera_get_view_width(view_camera[0] / 2)
-		
-	}
-
-}
-
-}
-
+time_room = room_speed * 2;
+randomize();
 room_start = function()
 {
-	randomize();
+
 	
 	var _background = choose(spr_background1, spr_background2, spr_background3);
 	//Pegando o id da camada
@@ -59,7 +43,6 @@ if(!instance_exists(obj_player))
 
 creat_enemies = function()
 {	
-	randomize();
 	
 	var _qtd = irandom_range(3, 7) * global.level;
 	
@@ -80,9 +63,8 @@ creat_enemies = function()
 					instance_destroy(_inimigo, false);
 				}
 			}
-
+		
 			}
-			show_message(_qtd)
 }
 
 prox_lvl = function()
@@ -91,9 +73,17 @@ prox_lvl = function()
 	//Se não houver mais inimigos grandes...Prox level.
 	if(_qtd_enemies <= 0) 
 	{
-		global.level++;
-		room_restart();
-	}
+		time_room--;
+		
+		if(time_room <= 0)
+		{
+			global.level++;
+			
+			room_restart();
+			
+			time_room = room_speed * 2;
+		}
+}
 }
 
 
